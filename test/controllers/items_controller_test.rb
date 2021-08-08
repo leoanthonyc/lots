@@ -31,6 +31,12 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   test "should get update" do
     item = items(:lot_a)
     put item_url(item), params: { item: { name: 'Residential A' } }
-    assert_response :redirect
+    assert_redirected_to item_url(item)
+  end
+
+  test "should get delete" do
+    item = items(:lot_a)
+    delete item_url(item)
+    assert_redirected_to items_url
   end
 end
