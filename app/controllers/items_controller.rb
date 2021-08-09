@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %w(show edit update destroy)
 
   def index
-    @items = Item.all
+    @items = Item.all.with_rich_text_description_and_embeds
   end
 
   def new
