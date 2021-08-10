@@ -8,4 +8,5 @@
   <%= form.rich_text_area :description %>
 
   <%= form.submit 'Save' %>
+  <%= link_to 'Cancel', @item.persisted? ? @item : items_path %>
 <% end %>
