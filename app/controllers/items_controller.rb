@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
+      flash.notice = "#{@item.name} was created."
       redirect_to @item
     else
       redirect_to new_item_path(@item)
@@ -26,6 +27,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
+      flash.notice = "#{@item.name} was updated."
       redirect_to @item
     else
       redirect_to edit_item_path(@item)
@@ -34,6 +36,7 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
+      flash.notice = "#{@item.name} was deleted."
       redirect_to items_path
     end
   end

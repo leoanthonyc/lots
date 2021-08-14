@@ -19,7 +19,7 @@
       <%= link_to 'Sign up', new_user_path %>
     <% end %>
     <% flash.each do |type, msg| %>
-      <div><%= msg %></div>
+      <p><%= msg %></p>
     <% end %>
 
     <%= yield %>
