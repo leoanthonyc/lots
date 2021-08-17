@@ -1,7 +1,9 @@
-<h1>Lots</h1>
-<ul>
-  <% @items.each do |item| %>
-    <li><%= link_to item.name, item %></li>
-  <% end %>
-</ul>
-<%= link_to 'New lot', new_item_path %>
+<div class="lots">
+  <h1>Lots</h1>
+  <ul>
+    <% @items.each do |item| %>
+      <li><%= link_to item.name, item %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'New lot', new_item_path %>
+</div>

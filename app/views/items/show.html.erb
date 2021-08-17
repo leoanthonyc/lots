@@ -1,12 +1,14 @@
-<h1>Item</h1>
+<div class="lot">
+  <h1>Item</h1>
 
-<h3>Name</h3>
-<%= @item.name %>
+  <h3>Name</h3>
+  <%= @item.name %>
 
-<h3>Description</h3>
-<%= @item.description %>
+  <h3>Description</h3>
+  <%= @item.description %>
 
-<br />
-<%= link_to 'Edit', edit_item_path(@item) %>
-<%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', items_path %>
+  <br />
+  <%= link_to 'Edit', edit_item_path(@item) %>
+  <%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', items_path %>
+</div>
